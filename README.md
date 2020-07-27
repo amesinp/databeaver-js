@@ -91,8 +91,8 @@ client.getEntries({
     status: 'accepted'
   },
   page: 1,
-}).then((projects) => {
-  console.log(projects.total);
+}).then((entries) => {
+  console.log(entries.total);
 });
 ```
 
