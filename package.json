@@ -1,0 +1,34 @@
+{
+  "name": "databeaver-js",
+  "version": "1.0.0",
+  "description": "NodeJS API wrapper for the DataBeaver API",
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint . --ext .ts",
+    "format": "prettier --write \"src/**/*.ts\" \"lib/**/*.js\"",
+    "prebuild": "npm run format",
+    "build": "tsc",
+    "pretest": "npm run lint && npm run build",
+    "test": "mocha test/**/*.test.js --timeout 20000"
+  },
+  "keywords": [],
+  "author": "Precious Amesinlola",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^14.0.26",
+    "@typescript-eslint/eslint-plugin": "^3.7.0",
+    "@typescript-eslint/parser": "^3.7.0",
+    "chai": "^4.2.0",
+    "eslint": "^7.5.0",
+    "mocha": "^8.0.1",
+    "nock": "^13.0.2",
+    "prettier": "^2.0.5",
+    "typescript": "^3.9.7"
+  },
+  "files": [
+    "lib/**/*"
+  ],
+  "dependencies": {
+    "axios": "^0.19.2"
+  }
+}
