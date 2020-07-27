@@ -1,6 +1,6 @@
 {
   "name": "databeaver-js",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "NodeJS API wrapper for the DataBeaver API",
   "main": "index.js",
   "scripts": {
@@ -9,7 +9,8 @@
     "prebuild": "npm run format",
     "build": "tsc && cp package.json ./lib && cp README.md ./lib",
     "pretest": "npm run lint && npm run build",
-    "test": "mocha test/**/*.test.js --timeout 20000"
+    "test": "mocha test/**/*.test.js --timeout 20000",
+    "push": "npm run build && npm publish lib"
   },
   "repository": {
     "type": "git",
@@ -29,9 +30,6 @@
     "prettier": "^2.0.5",
     "typescript": "^3.9.7"
   },
-  "files": [
-    "lib/**/*"
-  ],
   "dependencies": {
     "axios": "^0.19.2"
   }
