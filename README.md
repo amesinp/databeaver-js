@@ -61,6 +61,7 @@ const client = new databeaver.Client(
 {
   total: number,
   data: Array,
+  pageCount: number,
   links: {
     current: string,
     previous: string,
@@ -88,7 +89,8 @@ Get all accepted entries for form `507f1f77bcf86cd799439011` with a maximum of 3
 client.getEntries({
   filter: {
     form: '507f1f77bcf86cd799439011',
-    status: 'accepted'
+    status: 'accepted',
+    perPage: 30
   },
   page: 1,
 }).then((entries) => {

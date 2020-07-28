@@ -76,6 +76,7 @@ class DataBeaverAPI {
       return {
         total: response._metadata.total,
         data: response.data as T[],
+        pageCount: response._metadata.pageCount,
         links: {
           current: response._metadata.pageLinks.current || undefined,
           previous: response._metadata.pageLinks.previous || undefined,
@@ -87,6 +88,7 @@ class DataBeaverAPI {
     return {
       total: 0,
       data: [],
+      pageCount: 1,
       links: undefined,
     };
   }

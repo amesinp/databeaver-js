@@ -14,6 +14,7 @@ const testResult = {
     total: 2,
     page: 1,
     perPage: 1,
+    pageCount: 2,
     pageLinks: {
       current: 'https://api-databeaver-developer.bluegreensoft.com?page=1&perPage=1',
       next: 'https://api-databeaver-developer.bluegreensoft.com?page=2&perPage=1'
@@ -67,6 +68,7 @@ describe('Projects', () => {
         page: 1
       });
       expect(projects.total).to.be.equal(testResult._metadata.total);
+      expect(projects.pageCount).to.be.equal(testResult._metadata.pageCount);
       expect(projects.links.current).to.be.equal(testResult._metadata.pageLinks.current);
       expect(projects.links.next).to.be.equal(testResult._metadata.pageLinks.next);
       expect(projects.data.length).to.be.equal(1);
@@ -132,6 +134,7 @@ describe('Forms', () => {
         page: 1
       });
       expect(forms.total).to.be.equal(testResult._metadata.total);
+      expect(forms.pageCount).to.be.equal(testResult._metadata.pageCount);
       expect(forms.links.current).to.be.equal(testResult._metadata.pageLinks.current);
       expect(forms.links.next).to.be.equal(testResult._metadata.pageLinks.next);
       expect(forms.data.length).to.be.equal(1);
@@ -197,6 +200,7 @@ describe('Dispatches', () => {
         page: 1
       });
       expect(dispatches.total).to.be.equal(testResult._metadata.total);
+      expect(dispatches.pageCount).to.be.equal(testResult._metadata.pageCount);
       expect(dispatches.links.current).to.be.equal(testResult._metadata.pageLinks.current);
       expect(dispatches.links.next).to.be.equal(testResult._metadata.pageLinks.next);
       expect(dispatches.data.length).to.be.equal(1);
@@ -262,6 +266,7 @@ describe('Agents', () => {
         page: 1
       });
       expect(agents.total).to.be.equal(testResult._metadata.total);
+      expect(agents.pageCount).to.be.equal(testResult._metadata.pageCount);
       expect(agents.links.current).to.be.equal(testResult._metadata.pageLinks.current);
       expect(agents.links.next).to.be.equal(testResult._metadata.pageLinks.next);
       expect(agents.data.length).to.be.equal(1);
@@ -315,6 +320,7 @@ describe('Entries', () => {
         page: 1
       });
       expect(entries.total).to.be.equal(testResult._metadata.total);
+      expect(entries.pageCount).to.be.equal(testResult._metadata.pageCount);
       expect(entries.links.current).to.be.equal(testResult._metadata.pageLinks.current);
       expect(entries.links.next).to.be.equal(testResult._metadata.pageLinks.next);
       expect(entries.data.length).to.be.equal(1);

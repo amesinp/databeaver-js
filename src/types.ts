@@ -170,6 +170,7 @@ interface PageLinks {
 interface Response<T> {
   total: number;
   data: T[];
+  pageCount: number;
   links?: PageLinks;
 }
 
